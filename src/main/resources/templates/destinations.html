@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <th:block th:include="/fragments/menu"></th:block>
+    <th:block th:include="/fragments/menu1"> </th:block>
+
+<table border = "1">
+
+    <tr>
+        <th>Пункт назначения</th>
+        <th>Стоимость доставки(грн)</th>
+    </tr>
+    <tr th:each = "destination : ${destinations}">
+        <td th:utext="${destination.name}">...</td>
+        <td th:utext="${destination.summa}">...</td>
+    </tr>
+</table>
+
+</body>
+</html>

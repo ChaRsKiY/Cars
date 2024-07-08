@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Заявки</title>
+</head>
+<body>
+    <th:block th:include="/fragments/menu"></th:block>
+    <th:block th:include="/fragments/menu1"> </th:block>
+
+    <h1>Полученные заявки</h1>
+    <table border = "1">
+
+        <tr>
+            <th>Груз</th>
+            <th>Пункт доставки</th>
+            <th>Вес</th>
+            <th>Статус</th>
+        </tr>
+        <tr th:each = "order : ${orders}">
+            <td th:utext="${order.cargoId.name}">...</td>
+            <td th:utext="${order.destinationId.name}">...</td>
+            <td th:utext="${order.weight}">...</td>
+            <td th:utext="${order.status}">...</td>
+        </tr>
+    </table>
+
+</body>
+</html>

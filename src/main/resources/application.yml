@@ -1,0 +1,30 @@
+#spring:
+#  datasource:
+#      url: jdbc:postgresql://localhost:5440/AutoBase2
+#      username: sa
+#      password: admin
+#      driverClassName: org.postgresql.Driver
+#
+#  flyway:
+#      enabled: true
+#      user: sa
+#      password: admin
+#      schemas: public
+#      url: jdbc:postgresql://localhost:5440/AutoBase2
+
+spring:
+    datasource:
+        url: jdbc:postgresql://postgre-serv.postgres.database.azure.com/newData
+
+        username: ***
+        password: ***
+        driverClassName: org.postgresql.Driver
+
+    flyway:
+        enabled: true
+        user: ***
+        password: ***
+        schemas: public
+        url: jdbc:postgresql://postgre-serv.postgres.database.azure.com/newData
+
+
